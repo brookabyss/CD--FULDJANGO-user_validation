@@ -1,11 +1,14 @@
 {% extends 'user_val/base.html'%}
-{% block body%}
-
-
-
-
-
-
-
+{% block body %}
+<h1 class="show">The username you entered {{username}} is valid. Thank You!</h1>
+<h2>Usernames entered:</h2>
+{% for user in users %}
+<table>
+  <tr>
+    <td>{{user.username}}</td>
+    <td>{{user.created_at}}</td>
+  </tr>
+</table>
+{% endfor %}
 
 {% endblock%}

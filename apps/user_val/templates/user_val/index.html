@@ -1,11 +1,12 @@
 {% extends 'user_val/base.html'%}
 {% block body%}
 
-
-
-<p>Hello</p>
-
-
+<form class="" action="/register" method="post">
+  {% csrf_token %}
+  <h1 class="error">{{error}}</h1>
+  <label for="">Username: </label><input type="text" name="user_name" value="Me">
+  <input type="submit" name="submit" value="Submit">
+</form>
 
 
 {% endblock%}
